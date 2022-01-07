@@ -6,7 +6,26 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <h1>To-Do List</h1>
+    <div class="container">
+        <ul class="indexItems">
+            <% Items.forEach(item => { %>
+            <div class="card">
+                <li>
+                    <div class="title"><%= item.title %><br /></div>
+                    <div class="description"><%= item.description %></div><br />
+                    <div class="urgentDate">
+                        <div class="urgent">
+                            <%= item.urgent %> URGENT!
+                        </div>
+                        <div class="date">
+                            Due Date: <%= item.dueDate %>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <% }) %>
+        </ul>
+    </div>
 
     <%- include('./partials/footer.ejs') %>
 </body>
