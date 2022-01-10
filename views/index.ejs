@@ -13,6 +13,9 @@
                 <li>
                     <div class="title"><a href="/items/<%=item._id %>"> <%=item.title %> </a><br /></div>
                     <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button class="edit-btn">
+                            <i class="fas fa-edit"></i>
+                        </button>
                         <button class="delete-btn">
                         <i class="fas fa-trash-alt"></i>
                         </button>
@@ -26,9 +29,6 @@
                             <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %>
                         </div>
                         <form action="/items/<%=item._id %>/edit">
-                            <button class="edit-btn">
-                                <i class="fas fa-edit"></i>
-                            </button>
                         </form>
                     </div>
                 </li>

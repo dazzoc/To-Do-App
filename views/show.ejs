@@ -9,6 +9,9 @@
     <div class="container">
         <h1><%= item.title %></h1><br />
         <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+            <button class="edit-btn">
+                <i class="fas fa-edit"></i>
+            </button>
             <button class="delete-btn">
                 <i class="fas fa-trash-alt"></i>
             </button>
@@ -17,9 +20,6 @@
         <%= item.urgent %> Urgent!<br />
         <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %><br />
         <form action="/items/<%=item._id %>/edit">
-            <button class="edit-btn">
-                <i class="fas fa-edit"></i>
-            </button>
         </form>
     </div>
 
