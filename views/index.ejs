@@ -7,19 +7,31 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="container">
+        <div class="list-head">
+            <p>What's on the Docet?</p>
+            <span class="add-btn">
+                <a href="/items/new"><i class="fas fa-plus-square fa-2x"></i></a>
+            </span>
+        </div>
         <ul class="indexItems">
             <% items.forEach(item => { %>
             <div class="card">
-                <li>
+                <li class="list">
+                    <div class="item-head">
                     <div class="title"><a href="/items/<%=item._id %>"> <%=item.title %> </a><br /></div>
-                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                    <div class="edit-delete-btn">
+                    <form action="/items/<%=item._id %>/edit">
                         <button class="edit-btn">
                             <i class="fas fa-edit"></i>
                         </button>
+                    </form>
+                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
                         <button class="delete-btn">
-                        <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-trash-alt"></i>
                         </button>
                     </form>
+                </div>
+            </div>
                     <div class="description"><%= item.description %></div>
                     <div class="urgentDate">
                         <div class="urgent">
@@ -28,8 +40,6 @@
                         <div class="date">
                             <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %>
                         </div>
-                        <form action="/items/<%=item._id %>/edit">
-                        </form>
                     </div>
                 </li>
             </div>

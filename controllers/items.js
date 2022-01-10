@@ -80,13 +80,6 @@ itemsRouter.get("/:id/edit", (req, res) => {
   });
 
 // Show - Route
-// itemsRouter.get('/:id', (req, res) => {
-//     Item.findById(req.params.id, (err, foundItem) => {
-//         res.render('/show', {
-//             item: foundItem,
-//         });
-//     });
-// });
 itemsRouter.get('/:id', (req, res) => {
 	Item.findById(req.params.id, (err, foundItem) => {
 		res.render('show', {
