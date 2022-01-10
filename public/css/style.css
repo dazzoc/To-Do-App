@@ -45,3 +45,29 @@ nav > ol {
 
 .container {
     margin: 9rem 2rem;
+}
+
+/* --------------------------------FOOTER---------------------------- */
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+}
+
+.foot a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.icons {
+    list-style: none;
+}
+
+
