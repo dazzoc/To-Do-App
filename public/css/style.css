@@ -1,0 +1,47 @@
+body {
+    font-family: futura, san-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------------------NAV----------------------------------------- */
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    top: 0;
+    background-color: whitesmoke;
+}
+
+nav > ol {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    color: #000;
+    margin-right: 3rem;
+}
+
+.header  a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo {
+    margin-left: 2.5rem;
+    width: 12rem;
+}
+
+.home {
+    margin: 1rem;
+}
+
+/* --------------------------------BODY CONTENT---------------------- */
+
+.container {
+    margin: 9rem 2rem;
