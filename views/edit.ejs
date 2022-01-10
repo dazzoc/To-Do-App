@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
 
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
+    <h1>Edit Item</h1>
+    <form action="/items/<%=item._id%>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%=item.title%>" /><br />
+        Description: <input type="text" name="description" value="<%=item.description%>" /><br />
+        Urget: <input type="checkbox" name="urgent" <% if(item.urgent === true){ %> checked <% } %> /><br />
+        Due Date: <input type="text" name="dueDate" value="<%=item.dueDate%>" /><br />
+        <input type="submit" name="" value="UPDATE" />
+    </form>
+
     <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

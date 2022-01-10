@@ -8,18 +8,28 @@
 
     <div class="container">
         <ul class="indexItems">
-            <% Items.forEach(item => { %>
+            <% items.forEach(item => { %>
             <div class="card">
                 <li>
-                    <div class="title"><%= item.title %><br /></div>
-                    <div class="description"><%= item.description %></div><br />
+                    <div class="title"><a href="/items/<%=item._id %>"> <%=item.title %> </a><br /></div>
+                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                        <button class="delete-btn">
+                        <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </form>
+                    <div class="description"><%= item.description %></div>
                     <div class="urgentDate">
                         <div class="urgent">
                             <%= item.urgent %> URGENT!
                         </div>
                         <div class="date">
-                            Due Date: <%= item.dueDate %>
+                            <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %>
                         </div>
+                        <form action="/items/<%=item._id %>/edit">
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </form>
                     </div>
                 </li>
             </div>
