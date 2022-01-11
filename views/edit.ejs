@@ -7,14 +7,41 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="container">
-    <h1>Edit Item</h1>
-    <form action="/items/<%=item._id%>?_method=PUT" method="POST">
-        Title: <input type="text" name="title" value="<%=item.title%>" /><br />
-        Description: <input type="text" name="description" value="<%=item.description%>" /><br />
-        Urget: <input type="checkbox" name="urgent" <% if(item.urgent === true){ %> checked <% } %> /><br />
-        Due Date: <input type="text" name="dueDate" value="<%=item.dueDate%>" /><br />
-        <input type="submit" name="" value="UPDATE" />
-    </form>
+        <div class="edit-card">
+            <!-- SIDEBAR -->
+            <div class="sidebar"></div>
+            <!-- EDIT ITEM CONSTAINER -->
+            <div class="edit-item">
+                <h1 class="edit-head">EDIT</h1>
+                <!-- FORM -->
+                <form action="/items/<%=item._id%>?_method=PUT" method="POST">
+                    <!-- TITLE -->
+                    <fieldset class="edit-title">
+                        <legend>TITLE</legend>
+                        <input type="text" name="title" value="<%=item.title%>" />
+                    </fieldset>
+                    <!-- DESCRIPTION -->
+                    <fieldset class="edit-description">
+                        <legend>DESCRIPTION</legend>
+                        <textarea type="text" name="description" ><%=item.description%></textarea>
+                    </fieldset>
+                    <!-- URGENT -->
+                    <div class="edit-u-d">
+                        <fieldset class="edit-urgent">
+                            <legend>URGENT</legend>
+                            <input class="checkbox" type="checkbox" name="urgent" <% if(item.urgent === true){ %> checked <% } %> />
+                        </fieldset>
+                        <!-- DUE -->
+                        <fieldset class="edit-due">
+                            <legend>DUE</legend>
+                            <input type="text" name="dueDate" value="<%=item.dueDate%>" />
+                        </fieldset>
+                    </div>
+                    <!-- UPDATE BUTTON -->
+                    <input class="edit-update-btn" type="submit" name="" value="UPDATE" />
+                </form>
+            </div>
+        </div>
     </div>
 
     <%- include('./partials/footer.ejs') %>

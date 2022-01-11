@@ -211,6 +211,97 @@ nav > ol {
     left: 5px;
 }
 
+/* --------------------------------EDIT PAGE------------------------- */
+
+.edit-card {
+    width: 50vw;
+    min-width: 550px;
+    height: 40vw;
+    min-height: 440px;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+      -1px -1px 10px #ddd,
+      1px -1px 10px #ddd,
+      -1px 1px 10px #ddd;  
+}
+
+/* SVG CONTAINER */
+
+.sidebar {
+    width: 55%;
+    border-radius: 10px 0 0 10px;
+    background-color: whitesmoke;
+}
+
+/* FORM CONTAINER */
+
+.edit-item {
+    width: 45%;
+    background: #f9f9f9;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.edit-head {
+    border-bottom: 2px solid #000;
+}
+
+/* FORMS */
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.edit-u-d {
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-urgent {
+    margin-right: 10px;
+}
+
+.checkbox {
+    position: relative;
+    right: 4px;
+}
+
+.edit-due {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.edit-update-btn {
+    border: 0px;
+    background-color: green;
+    color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: futura, san-serif;
+    min-width: 195px;
+    min-height: 50px;
+    max-width: 377px;
+    max-height: 375px;
+}
 
 /* --------------------------------FOOTER---------------------------- */
 
