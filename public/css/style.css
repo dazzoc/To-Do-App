@@ -92,10 +92,6 @@ nav > ol {
     box-shadow: 0 0 10px -5px #000;
 }
 
-.list {
-    list-style: none;
-}
-
 .list-title {
     font-weight: bold;
 }
@@ -231,8 +227,15 @@ nav > ol {
 
 .sidebar {
     width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px 0 0 10px;
     background-color: whitesmoke;
+}
+
+.edit-illo {
+    width: 85%;
 }
 
 /* FORM CONTAINER */
@@ -283,6 +286,11 @@ input {
     box-sizing: border-box;
 }
 
+input:focus {
+    outline: 0;
+    border: 2px solid purple;
+}
+
 .edit-update-btn {
     border: 0px;
     background-color: green;
@@ -290,6 +298,11 @@ input {
     border-radius: 5px;
     padding: 10px;
     margin: 5px 0;
+}
+
+.edit-update-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px -5px #000;
 }
 
 textarea {
@@ -301,6 +314,11 @@ textarea {
     min-height: 50px;
     max-width: 377px;
     max-height: 375px;
+}
+
+textarea:focus {
+    outline: 0;
+    border: 2px solid purple;
 }
 
 /* --------------------------------FOOTER---------------------------- */
