@@ -1,11 +1,11 @@
 module.exports = [{
     title: 'Give the Dog a BATH',
-    description: 'Damn Dog got skunked again! wash the dog in tomato juice and vinigar.',
+    description: 'Damn Dog got skunked again! wash the dog in tomato juice and vinegar.',
     dueDate: '1/14/22',
     urgent: 'true',
 }, {
     title: 'Hang Pictures',
-    description: 'Hang up the 5 pictures Mom gave us for chrismas in the living room. If she dosent see them next time shes over shes going to have a fit.',
+    description: 'Hang up the 5 pictures Mom gave us for the holidays in the living room. If she dosent see them next time shes over shes going to have a fit.',
     dueDate: '1/20/22',
     urgent: 'false',
 }, {

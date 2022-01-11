@@ -1,6 +1,7 @@
 :root {
     --light-gray: #f5f5f5;
     --green: #258F68;
+    --black: #000000;
 }
 
 body {
@@ -35,6 +36,11 @@ body {
     top: 0;
     z-index: 1;
     background-color: var(--light-gray);
+    transition: 0.2s ease-in-out;
+}
+
+.navHidden {
+    transform: translateY(-100px);
 }
 
 nav > ol {
@@ -42,22 +48,55 @@ nav > ol {
     justify-content: right;
     align-items: center;
     list-style: none;
-    color: #000;
+    color: var(--black);
     margin-right: 3rem;
 }
 
 .header  a {
     text-decoration: none;
-    color: #000;
+    color: var(--black);
 }
 
 .logo {
     margin-left: 2.5rem;
     width: 12rem;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1, 1.1);
 }
 
 .home {
     margin: 1rem;
+}
+
+.home::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--black);
+    display: block;
+    margin: auto;
+    transition: 0.4s ease-in-out;
+}
+
+.home:hover::after {
+    width: 100%;
+}
+
+.signOut::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--black);
+    display: block;
+    margin: auto;
+    transition: 0.4s ease-in-out;
+}
+
+.signOut:hover::after {
+    width: 100%;
 }
 
 /* --------------------------------BODY CONTENT---------------------- */
@@ -113,11 +152,16 @@ nav > ol {
 
 .fa-plus-square {
     color: var(--green);
+    transition: 0.2s ease-in-out;
+}
+
+.fa-plus-square:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .item-title > a {
     text-decoration: none;
-    color: #000;
+    color: var(--black);
 }
 
 .item-title {
@@ -137,12 +181,35 @@ nav > ol {
     align-items: center;
 }
 
+.anchor-eye {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.fa-eye {
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.fa-eye:hover {
+    transform: scale(1.2, 1.2);
+}
+
 .edit-btn {
     border: none;
     background-color: none;
     cursor: pointer;
     margin-right: 10px;
     padding: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .delete-btn {
@@ -151,6 +218,11 @@ nav > ol {
     cursor: pointer;
     margin: 0;
     padding: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .description {
@@ -270,13 +342,13 @@ nav > ol {
 }
 
 .edit-head {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--black);;
 }
 
 /* FORMS */
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid #766B2E;
     border-radius: 5px;
     padding: 10px;
     margin: 5px 0;
@@ -303,12 +375,14 @@ fieldset {
 input {
     width: 100%;
     padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #766B2E;
     box-sizing: border-box;
 }
 
 input:focus {
     outline: 0;
-    border: 2px solid purple;
+    border: 2px solid #BD479B;
 }
 
 .edit-update-btn {
@@ -322,7 +396,7 @@ input:focus {
 
 .edit-update-btn:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px -5px #000;
+    box-shadow: 0 0 10px -5px var(--black);;
 }
 
 textarea {
@@ -330,6 +404,8 @@ textarea {
     padding: 5px;
     box-sizing: border-box;
     font-family: futura, san-serif;
+    border: 1px solid #766B2E;
+    border-radius: 5px;
     min-width: 195px;
     min-height: 50px;
     max-width: 377px;
@@ -338,7 +414,7 @@ textarea {
 
 textarea:focus {
     outline: 0;
-    border: 2px solid purple;
+    border: 2px solid #BD479B;
 }
 
 /* --------------------------------FOOTER---------------------------- */
@@ -362,7 +438,7 @@ textarea:focus {
 
 .foot a {
     text-decoration: none;
-    color: #000;
+    color: var(--black);;
 }
 
 .icons {

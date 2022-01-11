@@ -18,8 +18,9 @@
             <div class="card">
                 <li class="list">
                     <div class="item-head">
-                        <div class="item-title"><a href="/items/<%=item._id %>"> <%=item.title %> </a><br /></div>
+                        <div class="item-title"><%=item.title %><br /></div>
                         <div class="edit-delete-btn">
+                            <a class="anchor-eye" href="/items/<%=item._id %>"><i class="fas fa-eye"></i></a>
                             <form action="/items/<%=item._id %>/edit">
                                 <button class="edit-btn">
                                     <i class="fas fa-edit"></i>
