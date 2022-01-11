@@ -28,6 +28,7 @@ body {
     height: 100px;
     align-items: center;
     top: 0;
+    z-index: 1;
     background-color: whitesmoke;
 }
 
@@ -72,12 +73,13 @@ nav > ol {
     position: relative;
     top: 15px;
     left: 20px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px 0 20px;
     margin: 0;
     width: 50vw;
     min-width: 500px;
     background-color: whitesmoke;
     border-radius: 20px;
+    box-shadow: 0 0 10px -5px #000;
 }
 
 .card {
@@ -87,10 +89,25 @@ nav > ol {
     min-width: 500px;
     background-color: whitesmoke;
     border-radius: 20px;
+    box-shadow: 0 0 10px -5px #000;
 }
 
 .list {
     list-style: none;
+}
+
+.list-title {
+    font-weight: bold;
+}
+
+.fa-plus-square {
+    color: green;
+}
+
+.item-title > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
 
 .item-head {
@@ -104,16 +121,60 @@ nav > ol {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    left: 5px;
 }
 
 .edit-btn {
     border: none;
     background-color: none;
+    cursor: pointer;
 }
 
 .delete-btn {
     border: none;
     background-color: none;
+    cursor: grab;
+}
+
+.description {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.urgentDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.urgent-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.urgent {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.urgText {
+    margin: 0;
+    font-size: 14px;
+}
+
+.notUrgent {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 5px;
 }
 
 

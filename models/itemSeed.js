@@ -5,7 +5,7 @@ module.exports = [{
     urgent: 'true',
 }, {
     title: 'Hang Pictures',
-    description: 'Hand up the 5 pictures Mom sent in the mail for chrismas in the living room. If she dosent see them next time shes over shes going to have a fit.',
+    description: 'Hang up the 5 pictures Mom gave us for chrismas in the living room. If she dosent see them next time shes over shes going to have a fit.',
     dueDate: '1/20/22',
     urgent: 'false',
 }, {
