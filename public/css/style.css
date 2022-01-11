@@ -1,3 +1,8 @@
+:root {
+    --light-gray: #f5f5f5;
+    --green: #258F68;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -29,7 +34,7 @@ body {
     align-items: center;
     top: 0;
     z-index: 1;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
 }
 
 nav > ol {
@@ -77,9 +82,12 @@ nav > ol {
     margin: 0;
     width: 50vw;
     min-width: 500px;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
     border-radius: 20px;
-    box-shadow: 0 0 10px -5px #000;
+    box-shadow: 1px 1px 10px #ddd,
+      -1px -1px 10px #ddd,
+      1px -1px 10px #ddd,
+      -1px 1px 10px #ddd; 
 }
 
 .card {
@@ -87,9 +95,16 @@ nav > ol {
     margin: 5px;
     width: 50vw;
     min-width: 500px;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
     border-radius: 20px;
-    box-shadow: 0 0 10px -5px #000;
+    box-shadow: 1px 1px 10px #ddd,
+      -1px -1px 10px #ddd,
+      1px -1px 10px #ddd,
+      -1px 1px 10px #ddd; 
+}
+
+.list {
+    list-style: none;
 }
 
 .list-title {
@@ -97,7 +112,7 @@ nav > ol {
 }
 
 .fa-plus-square {
-    color: green;
+    color: var(--green);
 }
 
 .item-title > a {
@@ -120,20 +135,22 @@ nav > ol {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: relative;
-    left: 5px;
 }
 
 .edit-btn {
     border: none;
     background-color: none;
     cursor: pointer;
+    margin-right: 10px;
+    padding: 0;
 }
 
 .delete-btn {
     border: none;
     background-color: none;
-    cursor: grab;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
 .description {
@@ -159,7 +176,7 @@ nav > ol {
 .urgent {
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: #F56E51;
     border-radius: 5px;
     margin-right: 5px;
 }
@@ -172,7 +189,7 @@ nav > ol {
 .notUrgent {
     width: 20px;
     height: 20px;
-    background-color: gray;
+    background-color: #D6CFB0;
     border-radius: 5px;
 }
 
@@ -187,9 +204,12 @@ nav > ol {
     margin: 5px;
     width: 50vw;
     min-width: 500px;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
     border-radius: 20px;
-    box-shadow: 0 0 10px -5px #000;
+    box-shadow: 1px 1px 10px #ddd,
+      -1px -1px 10px #ddd,
+      1px -1px 10px #ddd,
+      -1px 1px 10px #ddd; 
 }
 
 .show-head {
@@ -231,7 +251,7 @@ nav > ol {
     justify-content: center;
     align-items: center;
     border-radius: 10px 0 0 10px;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
 }
 
 .edit-illo {
@@ -293,7 +313,7 @@ input:focus {
 
 .edit-update-btn {
     border: 0px;
-    background-color: green;
+    background-color: var(--green);
     color: #f9f9f9;
     border-radius: 5px;
     padding: 10px;
@@ -331,7 +351,7 @@ textarea:focus {
     align-items: center;
     width: 100%;
     height: 140px;
-    background-color: whitesmoke;
+    background-color: var(--light-gray);
 }
 
 .footer-logo {
@@ -355,4 +375,14 @@ textarea:focus {
     margin: .1rem;
 }
 
+/* ----------------------------404------------------------------------ */
 
+.pnf-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pnf {
+    width: 100%;
+}

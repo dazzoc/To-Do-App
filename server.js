@@ -34,7 +34,7 @@ app.use(methodOverride('_method'));
 app.get('/', (req, res) => res.redirect('/items'));
 app.use('/items', itemsController);
 app.get('/*', (req, res) => {
-    res.send('<h1>404 PAGE NOT FOUND!</h1>');
+	res.render('pnf')
 });
 
 //=============================================================================
