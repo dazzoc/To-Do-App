@@ -107,6 +107,9 @@ nav > ol {
 .item-title > a {
     text-decoration: none;
     color: #000;
+}
+
+.item-title {
     font-weight: bold;
 }
 
@@ -175,6 +178,37 @@ nav > ol {
     height: 20px;
     background-color: gray;
     border-radius: 5px;
+}
+
+.date {
+    font-size: 15px;
+}
+
+/* -------------------------------SHOW-------------------------------- */
+
+.show-card {
+    padding: 20px 20px 20px 20px;
+    margin: 5px;
+    width: 50vw;
+    min-width: 500px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px -5px #000;
+}
+
+.show-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-edit-delete-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 5px;
 }
 
 

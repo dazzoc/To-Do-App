@@ -7,20 +7,40 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="container">
-        <h1><%= item.title %></h1><br />
-        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-            <button class="edit-btn">
-                <i class="fas fa-edit"></i>
-            </button>
-            <button class="delete-btn">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-        </form>
-        <%= item.description %><br />
-        <%= item.urgent %> Urgent!<br />
-        <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %><br />
-        <form action="/items/<%=item._id %>/edit">
-        </form>
+        <div class="card">
+            <li class="list">
+                <div class="item-head">
+                    <div class="item-title"><%=item.title %> <br /></div>
+                    <div class="edit-delete-btn">
+                        <form action="/items/<%=item._id %>/edit">
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </form>
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                            <button class="delete-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="description"><%= item.description %></div>
+                <div class="urgentDate">
+                    <div class="urgent-box">
+                        <% if(item.urgent === true) { %>
+                            <div class="urgent-text">
+                                <div class="urgent"></div><p class="urgText">URGENT!</p>
+                            </div>
+                        <% } else { %> 
+                            <div class="notUrgent"></div>
+                        <% } %>
+                    </div>
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> Due: <%= item.dueDate %>
+                    </div>
+                </div>
+            </li>
+        </div>
     </div>
 
     <%- include('./partials/footer.ejs') %>
