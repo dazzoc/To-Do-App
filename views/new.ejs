@@ -7,15 +7,41 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="container">
-    <h1>New Item</h1>
-    <form action="/items" method="POST">
-        <!--  NOTE: the form is pre-populated with values for the server-->
-        Title: <input type="text" name="title" /><br />
-        Description: <input type="text" name="description" /><br />
-        Urgent: <input type="checkbox" name="urgent" /><br />
-        Date: <input type="text" name="dueDate" /><br />
-        <input type="submit" value="ADD" />
-    </form>
+        <div class="edit-card">
+            <!-- SIDEBAR -->
+            <div class="sidebar"></div>
+            <!-- EDIT ITEM CONSTAINER -->
+            <div class="edit-item">
+                <h1 class="edit-head">NEW TASK</h1>
+                <!-- FORM -->
+                <form action="/items" method="POST">
+                    <!-- TITLE -->
+                    <fieldset class="edit-title">
+                        <legend>TITLE</legend>
+                        <input type="text" name="title" />
+                    </fieldset>
+                    <!-- DESCRIPTION -->
+                    <fieldset class="edit-description">
+                        <legend>DESCRIPTION</legend>
+                        <textarea type="text" name="description" ></textarea>
+                    </fieldset>
+                    <!-- URGENT -->
+                    <div class="edit-u-d">
+                        <fieldset class="edit-urgent">
+                            <legend>URGENT</legend>
+                            <input class="checkbox" type="checkbox" name="urgent" />
+                        </fieldset>
+                        <!-- DUE -->
+                        <fieldset class="edit-due">
+                            <legend>DUE</legend>
+                            <input type="text" name="dueDate" />
+                        </fieldset>
+                    </div>
+                    <!-- UPDATE BUTTON -->
+                    <input class="edit-update-btn" type="submit" value="ADD" />
+                </form>
+            </div>
+        </div>
     </div>
 
     <%- include('./partials/footer.ejs') %>
