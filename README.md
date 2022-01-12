@@ -21,7 +21,7 @@ ___
 
 ___
 ## Getting Started
-[Click Here](https://dazzoc.github.io/Hex-Color-App/) to see my deployed app!
+[Click Here](https://docet.herokuapp.com/) to see my deployed app!
 ___
 ## Future Enhancements
 - Ability to drag and drop in to different scetions 
