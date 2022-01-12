@@ -11,6 +11,7 @@ ___
 - MongoDB
 - Mongoose
 - Google Fonts
+- Font Awesome Icons
 ___
 ## Screenshots
 

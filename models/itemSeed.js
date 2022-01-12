@@ -15,7 +15,7 @@ module.exports = [{
     urgent: 'true',
 }, {
     title: 'Loose Change',
-    description: 'Take the loose change to the bank for extra snack money',
+    description: 'Take the loose change to the bank for extra snack money.',
     dueDate: '1/30/22',
     urgent: 'false',
 }]

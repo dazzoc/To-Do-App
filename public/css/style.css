@@ -271,33 +271,7 @@ nav > ol {
 
 /* -------------------------------SHOW-------------------------------- */
 
-.show-card {
-    padding: 20px 20px 20px 20px;
-    margin: 5px;
-    width: 50vw;
-    min-width: 500px;
-    background-color: var(--light-gray);
-    border-radius: 20px;
-    box-shadow: 1px 1px 10px #ddd,
-      -1px -1px 10px #ddd,
-      1px -1px 10px #ddd,
-      -1px 1px 10px #ddd; 
-}
 
-.show-head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.show-edit-delete-btn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    left: 5px;
-}
 
 /* --------------------------------EDIT PAGE------------------------- */
 

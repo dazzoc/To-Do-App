@@ -1,6 +1,9 @@
-const nav = document.querySelector("#head");
+// VARIABLES
+const nav = document.querySelector('#head');
 let userScrollY = window.scrollY;
 
+
+// EVENT LISTENERS
 window.addEventListener('scroll', () => {
     if (userScrollY < window.scrollY) {
         nav.classList.add("navHidden");
@@ -9,3 +12,4 @@ window.addEventListener('scroll', () => {
     }
     userScrollY = window.scrollY;
 });
+
