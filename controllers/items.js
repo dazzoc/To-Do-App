@@ -33,7 +33,7 @@ itemsRouter.get('/new', (req, res) => {
 itemsRouter.delete('/:id', (req, res) => {
     Item.findByIdAndDelete(req.params.id, (err, deletedItem) => {
         //res.send(deletedItem);
-        console.log(req.params.id);
+        //console.log(req.params.id);
         res.redirect('/items');
     });
 });

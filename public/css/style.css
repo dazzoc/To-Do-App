@@ -97,7 +97,7 @@ nav > ol {
 
 .signOut:hover::after {
     width: 100%;
-}
+} 
 
 /* --------------------------------BODY CONTENT---------------------- */
 
@@ -114,13 +114,10 @@ nav > ol {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: 15px;
-    left: 20px;
     padding: 5px 20px 0 20px;
     margin: 0;
     width: 50vw;
-    min-width: 500px;
+    min-width: 250px;
     background-color: var(--light-gray);
     border-radius: 20px;
     box-shadow: 1px 1px 10px #ddd,
@@ -133,7 +130,7 @@ nav > ol {
     padding: 20px 20px 20px 20px;
     margin: 5px;
     width: 50vw;
-    min-width: 500px;
+    min-width: 250px;
     background-color: var(--light-gray);
     border-radius: 20px;
     box-shadow: 1px 1px 10px #ddd,
@@ -157,6 +154,11 @@ nav > ol {
 
 .fa-plus-square:hover {
     transform: scale(1.1, 1.1);
+}
+
+.indexItems {
+    padding: 0;
+    margin: 0;
 }
 
 .item-title > a {
@@ -268,7 +270,7 @@ nav > ol {
 
 .date {
     font-size: 15px;
-}
+} 
 
 /* -------------------------------SHOW-------------------------------- */
 
@@ -278,8 +280,8 @@ nav > ol {
 
 .edit-card {
     width: 50vw;
-    min-width: 550px;
-    height: 40vw;
+    min-width: 250px;
+    height: 40vh;
     min-height: 440px;
     margin: 50px auto;
     display: flex;
@@ -288,7 +290,7 @@ nav > ol {
       -1px -1px 10px #ddd,
       1px -1px 10px #ddd,
       -1px 1px 10px #ddd;  
-}
+} 
 
 /* SVG CONTAINER */
 
@@ -303,7 +305,7 @@ nav > ol {
 
 .edit-illo {
     width: 85%;
-}
+} 
 
 /* FORM CONTAINER */
 
@@ -318,7 +320,7 @@ nav > ol {
 
 .edit-head {
     border-bottom: 2px solid var(--black);;
-}
+} 
 
 /* FORMS */
 
@@ -336,6 +338,7 @@ fieldset {
 
 .edit-urgent {
     margin-right: 10px;
+    width: 100%;
 }
 
 .checkbox {
@@ -424,7 +427,7 @@ textarea:focus {
 .copyright {
     font-size: 12px;
     margin: .1rem;
-}
+} 
 
 /* ----------------------------404------------------------------------ */
 
@@ -436,93 +439,112 @@ textarea:focus {
 
 .pnf {
     width: 100%;
+} 
+
+/* ------------------------@ MEDIA------------------------------------- */
+
+@media screen and (max-width: 1100px){
+    .edit-card {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 40vw;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 40%;
+    }
+
+    .edit-illo {
+        width: 55%;
+    }
+
+    .edit-item {
+        height: 60%;
+        width: 100%;
+    }
 }
 
-/* ---------------------------POP-UP-DELETE---------------------------- */
 
-.model {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 0.2 ease-in-out;
-    background-color: var(--light-gray);
-    border-radius: 10px;
-    z-index: 10;
-    width: 350px;
-    height: 100px;
+@media screen and (max-width: 700px){
+    body {
+        margin: 0;
+    }
+    nav > ol {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-right: 50px;
+        width: 100%;
+        background-color: var(--light-gray);
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .list-head {
+        width: 80vw;
+    }
+    
+    .card {
+        width: 80vw;
+    }
+
+    .edit-card {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 80vw;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 52%;
+    }
+
+    .edit-illo {
+        width: 75%;
+    }
+
+    .edit-item {
+        height: 48%;
+        width: 100%;
+    }
+
+    textarea {
+        max-width: 508px;
+    }
+
 }
 
-.model.active {
-    transform: translate(-50%, -50%) scale(1);
-}
+@media screen and (max-width: 500px) {
 
-.model-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    margin: 0;
-    font-weight: bold;
-}
+    .edit-card {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 80vw;
+    }
 
-.close-btn {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 26px;
-    font-weight: bold;
-    transition: 0.2s ease-in-out;
-}
+    .sidebar {
+        width: 100%;
+        height: 40%;
+    }
 
-.close-btn:hover {
-    transform: scale(1.2, 1.2);
-}
+    .edit-illo {
+        width: 65%;
+    }
 
-.model-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    bottom: 17px;
-    padding: 5px;
-    margin: 10px;
-    font-weight: bold;
-    font-size: 14px;
-}
+    .edit-item {
+        height: 60%;
+        width: 100%;
+    }
 
-.model-delete-btn {
-    position: relative;
-    right: 3px;
-    border: none;
-    background-color: none;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    transition: 0.2s ease-in-out;
-}
-
-.model-delete-btn:hover {
-    transform: scale(1.2, 1.2);
-}
-
-#overlay {
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    transition: 0.2 ease-in-out;
-    pointer-events: none;
-}
-
-#overlay.active {
-    opacity: 1;
-    pointer-events: all;
+    textarea {
+        max-width: 348px;
+    }
 
 }
