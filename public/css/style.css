@@ -214,7 +214,6 @@ nav > ol {
 
 .delete-btn {
     position: relative;
-    top: 2px;
     border: none;
     background-color: none;
     cursor: pointer;
