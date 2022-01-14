@@ -67,11 +67,11 @@ nav > ol {
     transform: scale(1.1, 1.1);
 }
 
-.home {
+.navLinks {
     margin: 1rem;
 }
 
-.home::after {
+.navLinks::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -81,23 +81,9 @@ nav > ol {
     transition: 0.4s ease-in-out;
 }
 
-.home:hover::after {
+.navLinks:hover::after {
     width: 100%;
 }
-
-.signOut::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: var(--black);
-    display: block;
-    margin: auto;
-    transition: 0.4s ease-in-out;
-}
-
-.signOut:hover::after {
-    width: 100%;
-} 
 
 /* --------------------------------BODY CONTENT---------------------- */
 
@@ -304,7 +290,7 @@ nav > ol {
 }
 
 .edit-illo {
-    width: 75%;
+    width: 300px;
 } 
 
 /* FORM CONTAINER */
@@ -457,7 +443,7 @@ textarea:focus {
     }
 
     .edit-illo {
-        width: 55%;
+        width: 240px;
     }
 
     .edit-item {
@@ -471,14 +457,58 @@ textarea:focus {
     body {
         margin: 0;
     }
-    nav > ol {
+
+    .line {
+        width: 40px;
+        height: 3px;
+        background: #000;
+        margin: 5px;
+        position: relative;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 35%;
+    }
+
+    .navList {
+        position: relative;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding-bottom: 20px;
-        padding-right: 50px;
-        width: 100%;
-        background-color: var(--light-gray);
+        margin-left: 0;
+        width: 100vw;
+        top: 130px;
+        right: 250px;
+        background-color: #f9f9f9;
+        clip-path: circle(200px at 54% -150%);
+        transition: all 1s ease-in-out;
+    }
+
+    .navList.open {
+        clip-path: circle(1000px at 54% -70%);
+    }
+
+    .navList li {
+        opacity: 0;
+    }
+
+    .navList li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .navList li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .navList li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    li.fade {
+        opacity: 1;
     }
 
     .logo {
@@ -506,7 +536,7 @@ textarea:focus {
     }
 
     .edit-illo {
-        width: 75%;
+        width: 410px;
     }
 
     .edit-item {
@@ -535,7 +565,7 @@ textarea:focus {
     }
 
     .edit-illo {
-        width: 65%;
+        width: 240px;
     }
 
     .edit-item {
@@ -544,7 +574,7 @@ textarea:focus {
     }
 
     textarea {
-        max-width: 348px;
+        max-width: 508px;
     }
 
 }
